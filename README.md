@@ -2,7 +2,7 @@
 
 **Software Engineer | Web Developer | IT Infrastructure Specialist**
 
-I am a results-driven Software Engineer with over 10 years of experience in the IT sector (HCLTech, Softtek). My background as a Project Lead and L3 Support specialist allows me to build web applications with a focus on stability, scalability, and performance.
+I am a results-driven Software Engineer with over 10 years of experience in the IT sector (HCLTech, Softtek). My background as a Project Lead and L3 Support specialist provides me with a production-first mindset, ensuring that the web applications I build are stable, efficient, and easy to maintain.
 
 ### 🚀 What I'm working on
 - 💻 Finalizing the **"Around the U.S."** project at TripleTen (JavaScript & React).
@@ -17,6 +17,6 @@ I am a results-driven Software Engineer with over 10 years of experience in the 
 ---
 
 ### 🇲🇽 / 🇺🇸 Perfil Bilingüe
-Ingeniero de Software con enfoque en desarrollo Web. Mi experiencia previa en infraestructura me permite crear código robusto y listo para producción. 
+Ingeniero de Software con enfoque en desarrollo Web. Mi experiencia previa en soporte nivel 3 y gestión de incidentes críticos me permite crear código robusto, enfocado en la estabilidad y listo para entornos de producción reales.
 
 📫 **How to reach me:** [LinkedIn](www.linkedin.com/in/hectors-pinedorivera) | hector.pinedorivera@gmail.com
