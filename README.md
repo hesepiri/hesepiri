@@ -19,4 +19,4 @@ I am a results-driven Software Engineer with over 10 years of experience in the 
 ### 🇲🇽 / 🇺🇸 Perfil Bilingüe
 Ingeniero de Software con enfoque en desarrollo Web. Mi experiencia previa en soporte nivel 3 y gestión de incidentes críticos me permite crear código robusto, enfocado en la estabilidad y listo para entornos de producción reales.
 
-📫 **How to reach me:** [LinkedIn](www.linkedin.com/in/hectors-pinedorivera) | hector.pinedorivera@gmail.com
+📫 **How to reach me:** [LinkedIn](https://www.linkedin.com/in/hectors-pinedorivera) | hector.pinedorivera@gmail.com
