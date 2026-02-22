@@ -23,7 +23,7 @@
 body {
   font-family: "Inter", sans-serif;
   color: var(--text-main);
-  /* Degradado diagonal basado en tu nuevo SVG de Canva */
+  /* Degradado diagonal basado en mi nuevo SVG de Canva */
   background: linear-gradient(135deg, #0a2342 0%, #00f260 180%);
   line-height: 1.6;
   min-height: 100vh;
