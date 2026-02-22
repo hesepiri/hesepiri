@@ -206,6 +206,12 @@ h3 {
   line-height: 1.5;
 }
 
+/* Hace que las palabras Contexto, Análisis y Conclusión brillen en verde */
+.project-card__description strong {
+  color: var(--primary-color);
+  font-weight: normal; /* Para que no se vea tan tosco */
+}
+
 /* 3. La lista de tecnologías (Viñetas) */
 .project-card__tech-list {
   list-style: none; /* Quitamos los puntos feos */
