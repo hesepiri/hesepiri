@@ -1,14 +1,19 @@
 /* =========================================
-   VARIABLES Y RESET BÁSICO
+   VARIABLES CYBERPUNK ACTUALIZADAS
 ========================================= */
 :root {
-  --primary-color: #007bff; /* Cambia esto por tu color favorito mañana */
-  --text-color: #333;
-  --bg-color: #f4f4f4;
-  --card-bg: #ffffff;
+  --primary-color: #00f260; /* Verde neón brillante */
+  --primary-hover: #00c04b; /* Verde un poco más oscuro */
+  --bg-dark: #0a2342; /* Azul profundo base */
+  --card-bg: #112a4d; /* Azul para tarjetas */
+  --text-main: #ffffff;
+  --text-muted: #a1a1aa;
   --spacing-md: 2rem;
 }
 
+/* =========================================
+   RESET Y BASE
+========================================= */
 * {
   margin: 0;
   padding: 0;
@@ -16,90 +21,19 @@
 }
 
 body {
-  font-family: Arial, sans-serif; /* Mañana puedes meterle una Google Font */
-  color: var(--text-color);
-  background-color: var(--bg-color);
-  line-height: 1.6;
-}
-
-/* =========================================
-   VARIABLES (Paleta de Colores Tech)
-========================================= */
-/*:root {*/
-/*--primary-color: #3b82f6; */ /* Azul vibrante moderno */
-/*--primary-hover: #2563eb;  */ /* Azul más oscuro para cuando pasas el mouse */
-/*--bg-color: #f8fafc;     */ /* Un gris súper claro y elegante, no blanco puro */
-/*--card-bg: #ffffff; */
-/*--text-main: #0f172a;   */ /* Negro suave (pizarra) para títulos */
-/*--text-muted: #475569;*/ /* Gris oscuro para descripciones */
-/*  --spacing-md: 2rem;
-}
-
-body {
-  font-family: 'Inter', sans-serif;*/ /* Fuente limpia para leer fácil */
-/*  color: var(--text-muted);
-  background-color: var(--bg-color);
-  line-height: 1.6;
-}*/
-
-/* Títulos con más personalidad */
-/*h1, h2, h3, .logo {
-  font-family: 'Poppins', sans-serif;
-  color: var(--text-main);
-  font-weight: 700;
-}*/
-
-/* =========================================
-   VARIABLES (Paleta de Colores Tech)
-========================================= */
-:root {
-  --primary-color: #3b82f6; /* Azul vibrante moderno */
-  --primary-hover: #2563eb; /* Azul más oscuro para cuando pasas el mouse */
-  --bg-color: #f8fafc; /* Un gris súper claro y elegante, no blanco puro */
-  --card-bg: #ffffff;
-  --text-main: #0f172a; /* Negro suave (pizarra) para títulos */
-  --text-muted: #475569; /* Gris oscuro para descripciones */
-  --spacing-md: 2rem;
-}
-
-/*body {
-  font-family: "Inter", sans-serif;*/ /* Fuente limpia para leer fácil */
-/*color: var(--text-muted);
-  background-color: var(--bg-color);
-  line-height: 1.6;
-}*/
-
-body {
   font-family: "Inter", sans-serif;
-  color: #ffffff; /* Cambiamos el texto a blanco para que contraste con el fondo oscuro */
-
-  /* ¡El degradado exacto de tu SVG! (de izquierda a derecha) */
-  background: linear-gradient(to right, #004e92 0%, #00d2ff 100%);
-
+  color: var(--text-main);
+  /* Degradado diagonal basado en tu nuevo SVG de Canva */
+  background: linear-gradient(135deg, #0a2342 0%, #00f260 180%);
   line-height: 1.6;
   min-height: 100vh;
+  margin: 0;
 }
 
-/* Ajuste rápido para que los títulos principales resalten en blanco */
-.section__title,
-.hero__subtitle,
-.hero__description,
-.contact__description {
-  color: #ffffff;
-}
-
-/* Mantenemos el texto de las tarjetas oscuro porque su fondo es blanco */
-.project-card__title,
-.project-card__description,
-.project-card__tech-list {
-  color: var(--text-main);
-}
-
-/* Títulos con más personalidad */
+/* Tipografías */
 h1,
 h2,
-h3,
-.logo {
+h3 {
   font-family: "Poppins", sans-serif;
   color: var(--text-main);
   font-weight: 700;
@@ -119,105 +53,193 @@ h3,
   text-align: center;
   margin-bottom: var(--spacing-md);
   font-size: 2.5rem;
+  color: var(--primary-color); /* Cambiamos de blanco a verde neón */
+  text-shadow: 0 0 10px rgba(0, 242, 96, 0.3); /* Un brillo muy sutil */
 }
 
 /* =========================================
-   GRILLA DE PROYECTOS (Magia Responsiva)
+   HEADER Y NAVEGACIÓN
+========================================= */
+.header {
+  background-color: var(
+    --bg-dark
+  ); /* Color sólido para que no se pierda al scrollear */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.header__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 70px;
+}
+
+/*.logo {
+  font-size: 1.8rem;
+  text-decoration: none;
+  color: var(--primary-color);
+  letter-spacing: 2px;
+}*/
+
+.logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.logo__icon {
+  width: 45px; /* Tamaño perfecto para el header */
+  height: 45px;
+  transition:
+    transform 0.3s ease,
+    filter 0.3s ease;
+}
+
+.logo:hover .logo__icon {
+  transform: rotate(-5deg) scale(1.1); /* Un pequeño giro con estilo */
+  filter: drop-shadow(0 0 8px var(--primary-color)); /* Glow neón */
+}
+
+.nav__list {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+}
+
+.nav__link {
+  text-decoration: none;
+  color: var(--text-main);
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav__link:hover {
+  color: var(--primary-color);
+  text-shadow: 0 0 8px rgba(0, 242, 96, 0.5);
+}
+
+/* =========================================
+   HÉROE (PORTADA)
+========================================= */
+.hero__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.hero__image {
+  max-width: 280px;
+  width: 100%;
+  height: auto;
+  border-radius: 50%;
+  border: 4px solid var(--primary-color); /* Ahora el marco es verde neón */
+  box-shadow: 0 0 20px rgba(0, 242, 96, 0.3);
+  margin-bottom: 2rem;
+}
+
+/* =========================================
+   TARJETAS DE PROYECTOS
 ========================================= */
 .projects__grid {
   display: grid;
-  /* Esto hace que las tarjetas se acomoden solas dependiendo del tamaño de la pantalla */
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 2rem;
 }
 
-/* Estilo básico de la tarjeta para que se vea como un contenedor */
 .project-card {
   background-color: var(--card-bg);
-  border-radius: 8px;
+  border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    border 0.3s ease;
+  border: 1px solid rgba(226, 232, 240, 0.1);
 }
 
 .project-card:hover {
-  transform: translateY(-5px); /* Pequeño efecto al pasar el mouse */
+  transform: translateY(-8px);
+  border: 1px solid var(--primary-color);
+  box-shadow: 0 0 15px rgba(0, 242, 96, 0.2);
 }
 
 .project-card__image-container {
   width: 100%;
-  height: 200px; /* Altura fija para uniformidad */
+  height: 200px;
   overflow: hidden;
 }
 
 .project-card__image {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Evita que las imágenes se deformen */
+  object-fit: cover;
 }
 
 .project-card__content {
   padding: 1.5rem;
 }
 
-/* =========================================
-   SECCIÓN DE CONTACTO Y LOGOS
-========================================= */
-.contact__links-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1.5rem;
-  margin-top: 2rem;
+/*.project-card__title,
+.project-card__description,
+.project-card__tech-list {
+  color: #ffffff;*/ /* Aseguramos que se lea bien sobre el azul oscuro */
+/*}*/
+
+/* 1. Título de la tarjeta con más presencia */
+.project-card__title {
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+  color: var(--primary-color); /* Color verde neón */
+  font-family: "Poppins", sans-serif;
 }
 
-/* Alineación de texto con el icono SVG */
-.contact__link {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  text-decoration: none;
-  color: var(--text-color);
+/* 2. Descripción con mejor lectura */
+.project-card__description {
+  font-size: 0.95rem;
+  color: var(--text-main);
+  margin-bottom: 1.5rem;
+  text-align: left; /* Alineación limpia a la izquierda */
+  line-height: 1.5;
+}
+
+/* 3. La lista de tecnologías (Viñetas) */
+.project-card__tech-list {
+  list-style: none; /* Quitamos los puntos feos */
+  padding: 0;
+  margin-bottom: 2rem;
+  text-align: left;
+}
+
+.project-card__tech-list li {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  position: relative;
+  padding-left: 1.5rem; /* Espacio para nuestro nuevo "punto" */
+  margin-bottom: 0.5rem;
+  font-family: "Inter", monospace; /* Un toque monospaciado queda genial aquí */
+}
+
+/* Creamos una viñeta personalizada estilo Cyberpunk */
+.project-card__tech-list li::before {
+  content: ">"; /* Un símbolo de terminal se ve muy pro */
+  position: absolute;
+  left: 0;
+  color: var(--primary-color);
   font-weight: bold;
-  font-size: 1.1rem;
-  transition: color 0.3s ease;
 }
-
-.contact__link:hover {
-  color: #00d2ff; /* ¡Este es el cyan brillante del degradado! Resaltará muchísimo. */
-  /* O si prefieres que se mantengan blancos: color: #ffffff; */
-}
-
-/* Control de tamaño para los SVG (¡Para que no se desborden!) */
-.contact__icon {
-  width: 32px;
-  height: 32px;
-  /* Si tus SVG son negros y quieres que cambien de color, mañana vemos el truco con 'fill' o 'filter' */
-}
-
-/* Botones genéricos */
-/*.btn {
-  display: inline-block;
-  padding: 0.8rem 1.5rem;
-  text-decoration: none;
-  border-radius: 4px;
-  font-weight: bold;
-  margin-top: 1rem;
-}
-
-.btn--small {
-  background-color: var(--primary-color);
-  color: white;
-}*/
 
 /* =========================================
-   BOTONES CON ESTILO
+   BOTONES
 ========================================= */
 .btn {
   display: inline-block;
   padding: 0.8rem 1.8rem;
   text-decoration: none;
-  border-radius: 50px; /* Bordes redondeados modernos */
+  border-radius: 50px;
   font-family: "Poppins", sans-serif;
   font-weight: 600;
   transition: all 0.3s ease;
@@ -226,142 +248,85 @@ h3,
 
 .btn--small {
   background-color: var(--primary-color);
-  color: white;
-  box-shadow: 0 4px 10px rgba(59, 130, 246, 0.3); /* Sombra azulada */
+  color: var(--bg-dark); /* Texto oscuro para que resalte en el verde neón */
+  box-shadow: 0 4px 10px rgba(0, 242, 96, 0.2);
 }
 
 .btn--small:hover {
   background-color: var(--primary-hover);
-  transform: translateY(-2px); /* Se levanta un poquito al pasar el mouse */
-  box-shadow: 0 6px 15px rgba(37, 99, 235, 0.4);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(0, 242, 96, 0.4);
 }
 
 .btn--outline {
   background-color: transparent;
-  color: var(--primary-color);
-  border: 2px solid var(--primary-color);
-  margin-left: 10px;
+  color: var(--primary-color); /* El verde neón */
+  border: 2px solid var(--primary-color); /* Borde neón */
 }
 
 .btn--outline:hover {
   background-color: var(--primary-color);
-  color: white;
+  color: var(
+    --bg-dark
+  ); /* Al pasar el mouse, se llena de verde y el texto se vuelve azul oscuro */
+  box-shadow: 0 0 20px rgba(0, 242, 96, 0.4); /* Le damos un brillo neón al hover */
 }
 
 /* =========================================
-   DETALLES DE LA TARJETA (HOVER)
+   CONTACTO
 ========================================= */
-.project-card {
-  background-color: var(--card-bg);
-  border-radius: 12px; /* Bordes un poco más suaves */
-  overflow: hidden;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05); /* Sombra más sutil y elegante */
-  transition:
-    transform 0.3s ease,
-    box-shadow 0.3s ease;
-  border: 1px solid #e2e8f0; /* Un borde sutil que enmarca el proyecto */
-}
-
-.project-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.1); /* La sombra crece al hacer hover */
-}
-
-/* =========================================
-   AJUSTE FINAL: Héroe (Portada)
-========================================= */
-
-/* 1. Centramos el contenido del Héroe */
-.hero__container {
-  display: flex;
-  flex-direction: column; /* Apila foto sobre texto */
-  align-items: center; /* Centra horizontalmente */
-  text-align: center; /* Centra el texto */
-}
-
-/* 2. Domamos la imagen gigante */
-.hero__image {
-  max-width: 280px; /* Define un tamaño máximo elegante */
-  width: 100%; /* Asegura que sea responsiva en celulares */
-  height: auto; /* Mantiene la proporción */
-  border-radius: 50%; /* ¡El toque mágico! La hace redonda */
-  border: 4px solid white; /* Un marco blanco limpio */
-  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15); /* Sombrita pro */
-  margin-bottom: 2rem; /* Espacio para respirar antes del título */
-}
-
+/* 1. Asegura que el título y la descripción estén centrados */
 .contact__description {
   text-align: center;
-  max-width: 600px; /* Evita que el texto sea una línea larguísima en PC */
-  margin: 0 auto; /* Centra el bloque de texto en la pantalla */
-  margin-bottom: 2rem; /* Le da un respiro antes de los iconos */
+  max-width: 600px;
+  margin: 0 auto 2rem auto; /* Centra el bloque y da espacio abajo */
+  color: #ffffff;
 }
 
-/* =========================================
-   HEADER Y NAVEGACIÓN (FLEXBOX MAGIC)
-========================================= */
-.header {
-  background-color: var(--card-bg); /* Fondo blanco limpio */
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05); /* Sombrita sutil abajo */
-  position: sticky; /* Se queda fijo en la parte superior al bajar */
-  top: 0;
-  z-index: 1000; /* Asegura que no sea tapado por las imágenes */
-}
-
-.header__container {
+/* 2. Centra los enlaces y sus iconos */
+.contact__links-container {
   display: flex;
-  justify-content: space-between; /* Lanza el logo a la izq y el menú a la der */
-  align-items: center; /* Centra todo verticalmente */
-  height: 70px; /* Altura cómoda para la barra */
+  flex-direction: column;
+  align-items: center; /* Esto centra los enlaces horizontalmente */
+  justify-content: center;
+  gap: 1.5rem;
+  width: 100%; /* Ocupa todo el ancho para poder centrar */
 }
 
-/* El logo (Tus iniciales) */
-.logo {
-  font-size: 1.8rem;
-  text-decoration: none;
-  color: var(--primary-color); /* Usa tu azul moderno */
-  letter-spacing: 2px;
-}
-
-/* La lista del menú */
-.nav__list {
+.contact__link {
   display: flex;
-  list-style: none; /* Adiós a los puntitos de la lista */
-  gap: 2rem; /* Separación perfecta entre cada enlace */
-}
-
-/* Los enlaces individuales */
-.nav__link {
+  align-items: center;
+  gap: 12px;
   text-decoration: none;
-  color: var(--text-main);
-  font-family: "Poppins", sans-serif;
-  font-weight: 500;
-  font-size: 1rem;
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 1.1rem;
   transition: color 0.3s ease;
 }
 
-.nav__link:hover {
-  color: var(--primary-color); /* Se pinta de azul al pasar el mouse */
+.contact__link:hover {
+  color: var(--primary-color);
+  text-shadow: 0 0 8px rgba(0, 242, 96, 0.6);
+}
+
+.contact__icon {
+  width: 32px;
+  height: 32px;
+  filter: brightness(0) invert(1); /* Hace que los iconos negros se vean blancos */
 }
 
 /* =========================================
-   FOOTER (Estilo Corporativo)
+   FOOTER
 ========================================= */
 .footer {
-  background-color: var(
-    --card-bg
-  ); /* Fondo blanco para contrastar con el gris de la página */
-  padding: 1.5rem 0; /* Espacio arriba y abajo */
-  border-top: 1px solid #e2e8f0; /* Una línea muy sutil para separar el footer del resto */
-  margin-top: 4rem; /* Empuja el footer hacia abajo para que no se pegue a "Hablemos" */
-}
-
-.footer__container {
-  text-align: center; /* Centra el texto horizontalmente */
+  background-color: var(--bg-dark);
+  padding: 1.5rem 0;
+  border-top: 1px solid rgba(226, 232, 240, 0.1);
+  margin-top: 4rem;
 }
 
 .footer__text {
-  color: var(--text-muted); /* Usa el gris oscuro para que no robe atención */
-  font-size: 0.85rem; /* Letra un poquito más pequeña, típico de los footers */
-  font-family: "Inter", sans-serif;
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  text-align: center;
 }
