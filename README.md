@@ -1,6 +1,6 @@
 # Hi there, I'm Héctor Pinedo 👋
 
-**Software Engineer | Web Developer | IT Infrastructure Specialist**
+**Software Engineer | Project Lead | Web Developer**
 
 I am a results-driven Software Engineer with over 10 years of experience in the IT sector (HCLTech, Softtek). My background as a Project Lead and L3 Support specialist provides me with a production-first mindset, ensuring that the web applications I build are stable, efficient, and easy to maintain.
 
